@@ -1,0 +1,21 @@
+(Conjured, 0, 0) => name: Conjured, sellIn: 0, quality: 0
+(Conjured, 0, 1) => name: Conjured, sellIn: 0, quality: 0
+(Conjured, 0, 2) => name: Conjured, sellIn: 0, quality: 0
+(Conjured, 0, 3) => name: Conjured, sellIn: 0, quality: 0
+(Conjured, 0, 10) => name: Conjured, sellIn: 0, quality: 6
+(Conjured, 1, 0) => name: Conjured, sellIn: 0, quality: 0
+(Conjured, 1, 1) => name: Conjured, sellIn: 0, quality: 0
+(Conjured, 1, 2) => name: Conjured, sellIn: 0, quality: 0
+(Conjured, 1, 3) => name: Conjured, sellIn: 0, quality: 1
+(Conjured, 1, 10) => name: Conjured, sellIn: 0, quality: 8
+(Conjured Ring, 0, 0) => name: Conjured Ring, sellIn: 0, quality: 0
+(Conjured Ring, 0, 1) => name: Conjured Ring, sellIn: 0, quality: 0
+(Conjured Ring, 0, 2) => name: Conjured Ring, sellIn: 0, quality: 0
+(Conjured Ring, 0, 3) => name: Conjured Ring, sellIn: 0, quality: 0
+(Conjured Ring, 0, 10) => name: Conjured Ring, sellIn: 0, quality: 6
+(Conjured Ring, 1, 0) => name: Conjured Ring, sellIn: 0, quality: 0
+(Conjured Ring, 1, 1) => name: Conjured Ring, sellIn: 0, quality: 0
+(Conjured Ring, 1, 2) => name: Conjured Ring, sellIn: 0, quality: 0
+(Conjured Ring, 1, 3) => name: Conjured Ring, sellIn: 0, quality: 1
+(Conjured Ring, 1, 10) => name: Conjured Ring, sellIn: 0, quality: 8
+
