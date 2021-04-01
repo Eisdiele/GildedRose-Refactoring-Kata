@@ -1,0 +1,13 @@
+(Sulfuras, 0, 0) => name: Sulfuras, sellIn: 0, quality: 80
+(Sulfuras, 0, 50) => name: Sulfuras, sellIn: 0, quality: 80
+(Sulfuras, 0, 80) => name: Sulfuras, sellIn: 0, quality: 80
+(Sulfuras, 1, 0) => name: Sulfuras, sellIn: 1, quality: 80
+(Sulfuras, 1, 50) => name: Sulfuras, sellIn: 1, quality: 80
+(Sulfuras, 1, 80) => name: Sulfuras, sellIn: 1, quality: 80
+(Sulfuras, Hand of Ragnaros, 0, 0) => name: Sulfuras, Hand of Ragnaros, sellIn: 0, quality: 80
+(Sulfuras, Hand of Ragnaros, 0, 50) => name: Sulfuras, Hand of Ragnaros, sellIn: 0, quality: 80
+(Sulfuras, Hand of Ragnaros, 0, 80) => name: Sulfuras, Hand of Ragnaros, sellIn: 0, quality: 80
+(Sulfuras, Hand of Ragnaros, 1, 0) => name: Sulfuras, Hand of Ragnaros, sellIn: 1, quality: 80
+(Sulfuras, Hand of Ragnaros, 1, 50) => name: Sulfuras, Hand of Ragnaros, sellIn: 1, quality: 80
+(Sulfuras, Hand of Ragnaros, 1, 80) => name: Sulfuras, Hand of Ragnaros, sellIn: 1, quality: 80
+

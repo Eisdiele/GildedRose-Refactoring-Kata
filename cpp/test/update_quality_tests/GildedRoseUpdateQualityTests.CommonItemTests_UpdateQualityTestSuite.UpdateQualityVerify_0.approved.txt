@@ -1,0 +1,13 @@
+(Bread, 0, 0) => name: Bread, sellIn: 0, quality: 0
+(Bread, 0, 1) => name: Bread, sellIn: 0, quality: 0
+(Bread, 0, 30) => name: Bread, sellIn: 0, quality: 28
+(Bread, 1, 0) => name: Bread, sellIn: 0, quality: 0
+(Bread, 1, 1) => name: Bread, sellIn: 0, quality: 0
+(Bread, 1, 30) => name: Bread, sellIn: 0, quality: 29
+(Water, 0, 0) => name: Water, sellIn: 0, quality: 0
+(Water, 0, 1) => name: Water, sellIn: 0, quality: 0
+(Water, 0, 30) => name: Water, sellIn: 0, quality: 28
+(Water, 1, 0) => name: Water, sellIn: 0, quality: 0
+(Water, 1, 1) => name: Water, sellIn: 0, quality: 0
+(Water, 1, 30) => name: Water, sellIn: 0, quality: 29
+
