@@ -1,0 +1,13 @@
+(Aged Brie, 0, 40) => name: Aged Brie, sellIn: 0, quality: 42
+(Aged Brie, 0, 49) => name: Aged Brie, sellIn: 0, quality: 50
+(Aged Brie, 0, 50) => name: Aged Brie, sellIn: 0, quality: 50
+(Aged Brie, 1, 40) => name: Aged Brie, sellIn: 0, quality: 41
+(Aged Brie, 1, 49) => name: Aged Brie, sellIn: 0, quality: 50
+(Aged Brie, 1, 50) => name: Aged Brie, sellIn: 0, quality: 50
+(Aged Brie Cheese, 0, 40) => name: Aged Brie Cheese, sellIn: 0, quality: 42
+(Aged Brie Cheese, 0, 49) => name: Aged Brie Cheese, sellIn: 0, quality: 50
+(Aged Brie Cheese, 0, 50) => name: Aged Brie Cheese, sellIn: 0, quality: 50
+(Aged Brie Cheese, 1, 40) => name: Aged Brie Cheese, sellIn: 0, quality: 41
+(Aged Brie Cheese, 1, 49) => name: Aged Brie Cheese, sellIn: 0, quality: 50
+(Aged Brie Cheese, 1, 50) => name: Aged Brie Cheese, sellIn: 0, quality: 50
+
