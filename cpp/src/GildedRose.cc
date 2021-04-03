@@ -4,6 +4,13 @@ GildedRose::GildedRose(std::vector<Item> & items) : items(items)
 {
     createMetaItemsFromItems();
 }
+GildedRose::~GildedRose()
+{
+    for (int i = 0; i < _v_meta_items.size(); i++)
+    {
+      delete _v_meta_items[i];
+    }
+}
 
 void GildedRose::updateQuality(void)
 {
