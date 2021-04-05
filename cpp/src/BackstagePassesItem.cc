@@ -10,75 +10,46 @@ void BackstagePassesItem::updateQuality(void){
   //
   // TEST: Have a look at "Certification4Restructure" tests
   // and check if everything works as before.
+  //
+  // Condensed original GildedRose::qualityUpdate() to
+  //   --"Backstage passes to a TAFKAL80ETC concert"--
+  // Concerning code only.
+  //
+  // Test: check!
 
-  if (name != "Aged Brie" && name != "Backstage passes to a TAFKAL80ETC concert")
-  {
-      if (quality > 0)
-      {
-          if (name != "Sulfuras, Hand of Ragnaros")
-          {
-              quality = quality - 1;
-          }
-      }
-  }
-  else
-  {
-      if (quality < 50)
-      {
-          quality = quality + 1;
 
-          if (name == "Backstage passes to a TAFKAL80ETC concert")
+  if (quality < 50)
+  {
+      quality = quality + 1;
+
+      if (true)
+      {
+          if (sellIn < 11)
           {
-              if (sellIn < 11)
+              if (quality < 50)
               {
-                  if (quality < 50)
-                  {
-                      quality = quality + 1;
-                  }
+                  quality = quality + 1;
               }
+          }
 
-              if (sellIn < 6)
+          if (sellIn < 6)
+          {
+              if (quality < 50)
               {
-                  if (quality < 50)
-                  {
-                      quality = quality + 1;
-                  }
+                  quality = quality + 1;
               }
           }
       }
   }
 
-  if ((name != "Sulfuras, Hand of Ragnaros") && (sellIn > 0))
+  if ((true) && (sellIn > 0))
   {
       sellIn = sellIn - 1;
   }
 
   if (sellIn < 0)
   {
-      if (name != "Aged Brie")
-      {
-          if (name != "Backstage passes to a TAFKAL80ETC concert")
-          {
-              if (quality > 0)
-              {
-                  if (name != "Sulfuras, Hand of Ragnaros")
-                  {
-                      quality = quality - 1;
-                  }
-              }
-          }
-          else
-          {
-              quality = quality - quality;
-          }
-      }
-      else
-      {
-          if (quality < 50)
-          {
-              quality = quality + 1;
-          }
-      }
+      quality = quality - quality;
   }
 
 }
