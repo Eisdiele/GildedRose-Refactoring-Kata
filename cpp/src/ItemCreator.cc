@@ -27,7 +27,13 @@ int ItemCreator::categoryEnum(const std::string& name )
 
     for (int i = 0; i < _v_str_category_names.size(); i++)
     {
-        if (name == _v_str_category_names[i])
+        // std::string.find() finds substring in string.
+        // here the name is searched for predefined identifiers.
+        found_cat_idnum = name.find(_v_str_category_names[i]);
+
+        // if found is not std::string::npos there was a match!
+        // save it and break, then return value.
+        if (found_cat_idnum != std::string::npos)
         {
             i_category_idnum = i;
             break;
