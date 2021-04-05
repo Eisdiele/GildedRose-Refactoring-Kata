@@ -128,26 +128,3 @@ INSTANTIATE_TEST_CASE_P(
       )
     )
 );
-
-//=============================================================================
-// RESTRUCTURE TEST
-// Compares Testresults before and after Restructure.
-// "Before"-Testresults are kept in verified, ie. they only document
-// current behavior not necessary correct behavior.
-//
-INSTANTIATE_TEST_CASE_P(
-    CertifyCorrectRestructureTests,
-    UpdateQualityTestSuite,
-    ::testing::Values(
-      std::make_tuple(
-        std::vector<std::string> { "Aged Brie", "Aged Brie Cheese",
-                                    "Backstage passes",
-                                    "Backstage passes to a TAFKAL80ETC concert",
-                                    "Bread", "Water",
-                                    "Conjured", "Conjured Ring",
-                                    "Sulfuras", "Sulfuras, Hand of Ragnaros" },
-        std::vector<int> { 0, 1, 5, 10, 11 },      //sellIns
-        std::vector<int> { 0, 1, 2, 3, 10, 40, 48, 49, 50, 80 }  //qualities
-      )
-    )
-);
