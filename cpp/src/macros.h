@@ -9,6 +9,7 @@
 
 //Define Boundaries and behavior
 #define QUALITY_STEP 1
+#define SELLIN_STEP 1
 #define MAX_QUALITY 50
 #define MIN_QUALITY 0
 #define MIN_SELLIN 0
