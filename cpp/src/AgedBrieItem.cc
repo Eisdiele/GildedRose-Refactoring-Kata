@@ -6,33 +6,14 @@ AgedBrieItem::AgedBrieItem(const std::string& name, int sellIn, int quality) : M
 
 void AgedBrieItem::updateQuality(void){
 
-  // Just pasted GildedRose::updateQuality() below:
-  //
-  // TEST: Have a look at "Certification4Restructure" tests
-  // and check if everything works as before.
-  //
-  // Condensed original GildedRose::qualityUpdate() to
-  //       --"Aged Brie"--
-  // Concerning code only.
-  //
-  // Test: check!
+  int act_step = _qStep;
 
-  if (quality < 50)
-  {
-      setQuality( quality + 1 );
+  // double quality increase if sell by date has passed:
+  if ( sellIn == MIN_SELLIN ){
+    act_step = act_step * 2;
   }
 
-  if (sellIn > 0)
-  {
-      setSellIn( sellIn - 1 );
-  }
-
-  if (sellIn < 0)
-  {
-      if (quality < 50)
-      {
-          setQuality( quality + 1 );
-      }
-  }
+  setQuality( quality + act_step );
+  setSellIn( sellIn - _sStep );
 
 }
