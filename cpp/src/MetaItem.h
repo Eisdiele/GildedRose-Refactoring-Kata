@@ -13,7 +13,7 @@ class MetaItem : public Item
 public:
   MetaItem(std::string name, int sellIn, int quality);
   MetaItem* Create(std::string & name, const int sellIn, const int quality);
-  virtual void updateQuality(void);
+  virtual void updateQuality(void) = 0;
 
 };
 
