@@ -9,10 +9,6 @@
 //Library Classes
 class MetaItem : public Item
 {
-private:
-
-  //const?
-  int categoryEnum(std::string & name);
 
 public:
   MetaItem(std::string name, int sellIn, int quality);
