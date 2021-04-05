@@ -12,7 +12,7 @@ void SulfurasItem::updateQuality(void){
   // and check if everything works as before.
   //
   // Condensed original GildedRose::qualityUpdate() to
-  //       --"Aged Brie"--
+  //     --"Sulfuras, Hand of Ragnaros"--
   // Concerning code only.
   //
   // Test: check!
