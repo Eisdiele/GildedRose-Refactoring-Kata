@@ -6,10 +6,7 @@
 class CommonItem : public MetaItem {
 
 public:
-  CommonItem(const std::string& name, int sellIn, int quality) : MetaItem(name, sellIn, quality)
-  {
-  };
-
+  CommonItem(const std::string& name, int sellIn, int quality);
 };
 
 #endif
