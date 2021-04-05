@@ -19,19 +19,19 @@ void AgedBrieItem::updateQuality(void){
 
   if (quality < 50)
   {
-      quality = quality + 1;
+      setQuality( quality + 1 );
   }
 
   if (sellIn > 0)
   {
-      sellIn = sellIn - 1;
+      setSellIn( sellIn - 1 );
   }
 
   if (sellIn < 0)
   {
       if (quality < 50)
       {
-          quality = quality + 1;
+          setQuality( quality + 1 );
       }
   }
 

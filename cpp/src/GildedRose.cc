@@ -4,6 +4,7 @@ GildedRose::GildedRose(std::vector<Item> & items) : items(items)
 {
     createMetaItemsFromItems();
 }
+
 GildedRose::~GildedRose(void)
 {
     for (int i = 0; i < _v_meta_items.size(); i++)

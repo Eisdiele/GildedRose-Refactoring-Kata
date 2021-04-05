@@ -20,7 +20,7 @@ void BackstagePassesItem::updateQuality(void){
 
   if (quality < 50)
   {
-      quality = quality + 1;
+      setQuality( quality + 1 );
 
       if (true)
       {
@@ -28,7 +28,7 @@ void BackstagePassesItem::updateQuality(void){
           {
               if (quality < 50)
               {
-                  quality = quality + 1;
+                  setQuality( quality + 1 );
               }
           }
 
@@ -36,20 +36,20 @@ void BackstagePassesItem::updateQuality(void){
           {
               if (quality < 50)
               {
-                  quality = quality + 1;
+                  setQuality( quality + 1 );
               }
           }
       }
   }
 
-  if ((true) && (sellIn > 0))
+  if (sellIn > 0)
   {
-      sellIn = sellIn - 1;
+      setSellIn( sellIn - 1 );
   }
 
   if (sellIn < 0)
   {
-      quality = quality - quality;
+      setQuality( quality - quality );
   }
 
 }
