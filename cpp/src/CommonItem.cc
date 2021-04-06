@@ -6,7 +6,7 @@ CommonItem::CommonItem(const std::string& name, int sellIn, int quality) : MetaI
 
 void CommonItem::updateQuality(void){
 
-  int i_degrade_quality = -1 * _qStep * get_uQ_factor();
+  int i_degrade_quality = -1 * getQStep();
 
   if (sellIn == 0)
   {

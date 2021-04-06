@@ -11,8 +11,7 @@ class MetaItem : public Item
 {
 protected:
 
-  static const int _qStep = QUALITY_STEP;
-
+  virtual int getQStep() { return QUALITY_STEP; }
   virtual void setQuality( const int quality_value );
   virtual void setSellIn( void );
 

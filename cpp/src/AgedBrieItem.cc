@@ -6,7 +6,7 @@ AgedBrieItem::AgedBrieItem(const std::string& name, int sellIn, int quality) : M
 
 void AgedBrieItem::updateQuality(void){
 
-  int act_step = _qStep;
+  int act_step = getQStep();
 
   // double quality increase if sell by date has passed:
   if ( sellIn == MIN_SELLIN ){

@@ -6,16 +6,16 @@ BackstagePassesItem::BackstagePassesItem(const std::string& name, int sellIn, in
 
 void BackstagePassesItem::updateQuality(void){
 
-  int i_add_quality = _qStep;
+  int i_add_quality = getQStep();
 
   if (sellIn < 11)
   {
-    i_add_quality += _qStep;
+    i_add_quality += getQStep();
   }
 
   if (sellIn < 6)
   {
-    i_add_quality += _qStep;
+    i_add_quality += getQStep();
   }
 
   if (sellIn == 0)
