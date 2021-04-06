@@ -6,33 +6,14 @@ CommonItem::CommonItem(const std::string& name, int sellIn, int quality) : MetaI
 
 void CommonItem::updateQuality(void){
 
-  // Just pasted GildedRose::updateQuality() below:
-  //
-  // TEST: Have a look at "Certification4Restructure" tests
-  // and check if everything works as before.
-  //
-  // Condensed original GildedRose::qualityUpdate() to
-  //       --"any"--
-  // Concerning code only.
-  //
-  // Test: check!
+  int i_degrade_quality = -1 * _qStep;
 
-  if (quality > 0)
+  if (sellIn == 0)
   {
-      setQuality( quality - 1 );
+    i_degrade_quality *= 2;
   }
 
-  if (sellIn > 0)
-  {
-      setSellIn();
-  }
-
-  if (sellIn < 0)
-  {
-      if (quality > 0)
-      {
-          setQuality( quality - 1 );
-      }
-  }
+  setQuality( quality + i_degrade_quality );
+  setSellIn();
 
 }
