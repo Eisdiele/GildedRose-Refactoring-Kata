@@ -6,50 +6,24 @@ BackstagePassesItem::BackstagePassesItem(const std::string& name, int sellIn, in
 
 void BackstagePassesItem::updateQuality(void){
 
-  // Just pasted GildedRose::updateQuality() below:
-  //
-  // TEST: Have a look at "Certification4Restructure" tests
-  // and check if everything works as before.
-  //
-  // Condensed original GildedRose::qualityUpdate() to
-  //   --"Backstage passes to a TAFKAL80ETC concert"--
-  // Concerning code only.
-  //
-  // Test: check!
+  int i_add_quality = _qStep;
 
-
-  if (quality < 50)
+  if (sellIn < 11)
   {
-      setQuality( quality + 1 );
-
-      if (true)
-      {
-          if (sellIn < 11)
-          {
-              if (quality < 50)
-              {
-                  setQuality( quality + 1 );
-              }
-          }
-
-          if (sellIn < 6)
-          {
-              if (quality < 50)
-              {
-                  setQuality( quality + 1 );
-              }
-          }
-      }
+    i_add_quality += _qStep;
   }
 
-  if (sellIn > 0)
+  if (sellIn < 6)
   {
-      setSellIn();
+    i_add_quality += _qStep;
   }
 
-  if (sellIn < 0)
+  if (sellIn == 0)
   {
-      setQuality( quality - quality );
+    i_add_quality = -1 * quality;
   }
+
+  setQuality( quality + i_add_quality );
+  setSellIn();
 
 }
