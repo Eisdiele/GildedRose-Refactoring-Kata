@@ -13,5 +13,6 @@
 #define MAX_QUALITY 50
 #define MIN_QUALITY 0
 #define MIN_SELLIN 0
+#define FIX_LEGENDARY_QUALITY 80
 
 #endif

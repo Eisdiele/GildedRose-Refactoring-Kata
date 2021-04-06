@@ -44,7 +44,7 @@ void BackstagePassesItem::updateQuality(void){
 
   if (sellIn > 0)
   {
-      setSellIn( sellIn - 1 );
+      setSellIn();
   }
 
   if (sellIn < 0)
