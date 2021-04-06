@@ -14,6 +14,6 @@ void AgedBrieItem::updateQuality(void){
   }
 
   setQuality( quality + act_step );
-  setSellIn( sellIn - _sStep );
+  setSellIn();
 
 }

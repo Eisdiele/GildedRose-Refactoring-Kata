@@ -3,7 +3,6 @@
 MetaItem::MetaItem(std::string name, int sellIn, int quality) : Item(name, sellIn, quality)
 {
     setQuality(quality);
-    setSellIn(sellIn);
 }
 
 void MetaItem::setQuality( const int quality_value )
@@ -21,11 +20,12 @@ void MetaItem::setQuality( const int quality_value )
     }
 }
 
-void MetaItem::setSellIn( const int sellIn_value )
+void MetaItem::setSellIn( void )
 {
-  if ( sellIn_value >= MIN_SELLIN ) {
-      sellIn = sellIn_value;
-  } else {
+  if ( sellIn > MIN_SELLIN ) {
+      sellIn = sellIn - SELLIN_STEP;
+  }
+  if (sellIn < MIN_SELLIN) {
       sellIn = MIN_SELLIN;
   }
 
