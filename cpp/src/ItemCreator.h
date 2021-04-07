@@ -19,11 +19,11 @@ private:
   const std::vector<std::string> _v_str_category_names {
       AGEDBRIE_STRID, BACKSTAGEPASSES_STRID, CONJURED_STRID, SULFURAS_STRID};
 
-  int categoryEnum(const std::string& name );
+  itemtype findTypeFromName(const std::string& name );
 
 public:
   ItemCreator(void);
-  MetaItem* ItemCreate(const std::string& name, const int sellIn, const int quality);
+  MetaItem* ItemCreate( const std::string& name, const int sellIn, const int quality, itemtype iType = type_unspecified );
 };
 
 #endif

@@ -11,6 +11,7 @@ protected:
 
 public:
   ConjuredItem(const std::string& name, int sellIn, int quality);
+  itemtype getType(void) override { return type_conjured; }
 
 };
 
