@@ -21,7 +21,14 @@ class ItemTestSuite :
       std::vector < int >,    // expected sellIns
       std::vector < int >     // expected qualities
     >
-  > {};
+  > {
+  public:
+    MetaItem* item;
+    int sellIn;
+    int quality;
+    std::string assert_expl {"BAD TESTINSTANTIATION: parameter vectors do not match in length!"};
+  };
+
 
 TEST_P(ItemTestSuite, CheckItemIntegrity) {
 
@@ -34,23 +41,18 @@ TEST_P(ItemTestSuite, CheckItemIntegrity) {
   const std::vector<int> expecSellIns   = std::get<4>(GetParam());
   const std::vector<int> expecQualities = std::get<5>(GetParam());
 
-  MetaItem* item;
-  int sellIn;
-  int quality;
-
   // check for correct Testinstantiation:
-  std::string assert_expl {"BAD TESTINSTANTIATION: parameter vectors do not match in length!"};
   ASSERT_EQ( startSellIns.size(), startQualities.size() ) << assert_expl ;
   ASSERT_EQ( startQualities.size(), expecQualities.size() ) << assert_expl ;
   ASSERT_EQ( startSellIns.size(), expecSellIns.size() ) << assert_expl ;
 
-  // run Tests for each given element of start and expec vector.
+  // run Tests for each given element of start and expec vectors.
   for ( int i = 0; i < startSellIns.size(); i++ ){
 
     sellIn = startSellIns.at(i);
     quality = startQualities.at(i);
 
-    // Instantiate ItemObject for testing accroding to itemtype parameter.
+    //Create ItemObject for testing according to itemtype parameter.
     switch (it) {
       case type_agedbrie: item = new AgedBrieItem( name, sellIn, quality );
                           break;
@@ -80,15 +82,22 @@ TEST_P(ItemTestSuite, CheckItemIntegrity) {
 
     // check for correct NAME in Item object:
     EXPECT_EQ(item->getName(), name) <<
-      "Item::getName() does not provide the correct name."<< std::endl << s_explanation.str() << std::endl;
+      "Item::getName() does not provide the correct name."<< std::endl
+      << s_explanation.str() << std::endl;
 
     // check for correct SELLIN value in Item object after Item specific updateQuality() call:
     EXPECT_EQ(item->getSellIn(), expecSellIns.at(i)) <<
-      "After Item::updateQuality, Item::getSellIn() value [" << item->getSellIn() << "] is not equal to expected [" << expecSellIns.at(i) << "]." << std::endl << s_explanation.str() << std::endl;
+      "After Item::updateQuality, Item::getSellIn() value ["
+      << item->getSellIn() << "] is not equal to expected ["
+      << expecSellIns.at(i) << "]." << std::endl
+      << s_explanation.str() << std::endl;
 
     // check for correct QUALITY value in Item object after Item specific updateQuality() call:
     EXPECT_EQ(item->getQuality(), expecQualities.at(i)) <<
-      "After Item::updateQuality(), Item::getQuality() value [" << item->getQuality() << "] is not equal to expected [" << expecQualities.at(i) << "]." << std::endl << s_explanation.str() << std::endl;
+      "After Item::updateQuality(), Item::getQuality() value ["
+      << item->getQuality() << "] is not equal to expected ["
+      << expecQualities.at(i) << "]." << std::endl
+      << s_explanation.str() << std::endl;
 
   }
 }
