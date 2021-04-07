@@ -2,7 +2,9 @@
 
 MetaItem::MetaItem(std::string name, int sellIn, int quality) : Item(name, sellIn, quality)
 {
-    setQuality(quality);
+    // Make sure valid quality and sellIn values are going to be stored only.
+    setQuality( quality );
+    setSellIn( false ); // call setSellIn(), dont do a step in time but check for valid sellIn.
 }
 
 void MetaItem::setQuality( const int quality_value )
@@ -20,9 +22,9 @@ void MetaItem::setQuality( const int quality_value )
     }
 }
 
-void MetaItem::setSellIn( void )
+void MetaItem::setSellIn( const bool do_step )
 {
-  if ( sellIn > MIN_SELLIN ) {
+  if (( sellIn > MIN_SELLIN ) && do_step ) {
       sellIn = sellIn - SELLIN_STEP;
   }
   if (sellIn < MIN_SELLIN) {

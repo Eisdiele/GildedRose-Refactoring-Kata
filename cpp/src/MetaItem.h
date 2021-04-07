@@ -17,7 +17,7 @@ protected:
 
   virtual int getQStep() { return QUALITY_STEP; }
   virtual void setQuality( const int quality_value );
-  virtual void setSellIn( void );
+  virtual void setSellIn( const bool do_step = true );
 
 public:
 
