@@ -1,4 +1,5 @@
 add_subdirectory(cpp_googletest_approvaltest)
 add_subdirectory(cpp_googletest_unittest)
 add_subdirectory(update_quality_tests)
+add_subdirectory(cpp_item_types_google_unittest)
 add_subdirectory(cpp_texttest)
