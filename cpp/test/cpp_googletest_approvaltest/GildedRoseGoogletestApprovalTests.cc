@@ -1,4 +1,4 @@
-// Include header files for test frameworks 
+// Include header files for test frameworks
 #include <gtest/gtest.h>
 #include <ApprovalTests.hpp>
 
@@ -23,6 +23,7 @@ TEST(GildedRoseApprovalTests, VerifyCombinations) {
         vector<Item> items = {Item(name, sellIn, quality)};
         GildedRose app(items);
         app.updateQuality();
+        items = app.getItemInventory();
         return items[0];
     };
 
