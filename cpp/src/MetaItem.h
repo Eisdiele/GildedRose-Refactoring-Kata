@@ -11,7 +11,7 @@ enum itemtype {
 };
 
 //Library Classes
-class MetaItem : public Item
+class MetaItem : protected Item
 {
 protected:
 

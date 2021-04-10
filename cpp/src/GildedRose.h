@@ -13,6 +13,7 @@ private:
     std::vector<MetaItem*> _v_meta_items;
     // _ItmCrt is the object factory for item of different types:
     ItemCreator _ItmCrt;
+    void createMetaItemsFromItems(const std::vector<Item> & items);
 
 public:
 
@@ -21,10 +22,9 @@ public:
     ~GildedRose(void);
 
     void updateQuality(void);
-    void createMetaItemsFromItems(const std::vector<Item> & items);
     std::vector<MetaItem*> getInventory(void){return _v_meta_items;}
     std::vector<Item> getItemInventory(void);
-    
+
 };
 
 #endif
