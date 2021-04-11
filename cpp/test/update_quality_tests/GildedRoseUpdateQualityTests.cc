@@ -38,6 +38,7 @@ TEST_P(UpdateQualityTestSuite, UpdateQualityVerify) {
         std::vector<Item> items = {Item(name, sellIn, quality)};
         GildedRose app(items);
         app.updateQuality();
+        items = app.getItemInventory();
         return items[0];
     };
 
